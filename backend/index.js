@@ -4,9 +4,10 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 // import routes
 const routes = require('./routes');
+require('dotenv').config()
 
-const port = 8000;
-const dbUrl = "mongodb+srv://profsainhm:24434salah@cluster0.hgibgln.mongodb.net/gmcdatabase?retryWrites=true&w=majority"
+const port = process.env.PORT;
+const dbUrl = process.env.MONGODB_URL;
 
 // connect to database
 mongoose
